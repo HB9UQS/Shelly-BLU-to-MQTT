@@ -7,6 +7,7 @@
 // Shelly BLU devices:
 // SBBT - Shelly BLU Button
 // SBDW - Shelly BLU DoorWindow
+// SBWS - Shelly Ecowitt WS90 - Weather Station
 
 // sample Shelly DW service_data payload
 // 0x40 0x00 0x4E 0x01 0x64 0x05 0x00 0x00 0x00 0x2D 0x01 0x3F 0x00 0x00
@@ -99,6 +100,11 @@ BTH[0x12] = { n: "co2", t: uint16};
 BTH[0x17] = { n: "co", t: uint8 };
 BTH[0x0c] = { n: "Voltage", t: uint16, f: 0.001};
 BTH[0x4a] = { n: "Voltage", t: uint16, f: 0.1};
+BTH[0x44] = { n: 'Wind-Speed', t: uint16, f: 0.01, u: 'm/s' };
+BTH[0x45] = { n: 'Temperature', t: int16, f: 0.1, u: '°C' };
+BTH[0x46] = { n: 'UV-Index', t: uint8, f: 0.1 };
+BTH[0x5e] = { n: 'Wind-Direction', t: uint16, f: 0.01, u: '°' };
+BTH[0x5f] = { n: 'Precipitation', t: uint16, f: 0.1, u: 'mm' };
 BTH[0x18] = { n: "Cold", t: uint8 };
 BTH[0x1c] = { n: "Gas", t: uint8 };
 BTH[0x1d] = { n: "Heat", t: uint8 };
